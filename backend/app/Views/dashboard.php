@@ -13,27 +13,19 @@ use Faker\Provider\Base;
     <!-- Bootstrap CSS -->
     <link href="<?= base_url("assets/css/bootstrap.min.css"); ?>" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url("assets/vegas/vegas.min.css"); ?>">
+    <link rel="stylesheet" href="<?= base_url("assets/css/style.css"); ?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
     <style>
-        body {
-            background-color: #bcbcbc;
-        }
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
     </style>
 
-    <title>Hello, world!</title>
+    <title>PAMERAN 20 AGUSTUS 2022</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="mt-5">
-            <div class="card shadow shadow-lg" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
+        <?= $this->renderSection('content') ?>
     </div>
 
     <script src="<?= base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
@@ -41,7 +33,16 @@ use Faker\Provider\Base;
     <script src="<?= base_url("assets/vegas/vegas.min.js"); ?>"></script>
     <script>
         $("body").vegas({
-            // cover: false,
+            delay: 7000,
+            timer: false,
+            shuffle: true,
+            color: '#000',
+            firstTransition: 'fade',
+            firstTransitionDuration: 5000,
+            transition: ['fade2', 'zoomOut2', 'slideDown2'],
+            transitionDuration: 5000,
+            animation: ['kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight'],
+            overlay: true,
             slides: [{
                     src: "<?= base_url("/assets/img/slide2.png") ?>"
                 },
