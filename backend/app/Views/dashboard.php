@@ -28,6 +28,23 @@ use Faker\Provider\Base;
         <?= $this->renderSection('content') ?>
     </div>
 
+    <div class="modal fade" id="my-modal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered" id="modal-full">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="<?= base_url("assets/js/bootstrap.bundle.min.js"); ?>"></script>
     <script src="<?= base_url("assets/vegas/jquery.min.js"); ?>"></script>
     <script src="<?= base_url("assets/vegas/vegas.min.js"); ?>"></script>
@@ -52,6 +69,8 @@ use Faker\Provider\Base;
             ]
         });
     </script>
+
+    <?= $this->renderSection('script') ?>
 </body>
 
 </html>

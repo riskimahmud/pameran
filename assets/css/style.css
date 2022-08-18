@@ -59,18 +59,27 @@ img.logo-top{
 
 .menu-dashboard{
     /* width: 100%; */
-    /* padding: 10px; */
-    /* border-radius: 50%; */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+    min-height: 300px;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.345);
 }
 
+img.img-modal{
+    max-width: 300px;
+}
+
 .menu-dashboard > p{
-    margin-top: 0;
+    margin-top: 10px;
 }
 
 img.img-menu{
-    width: 200px;
+    width: 150px;
 }
 
 @keyframes gantung { 
